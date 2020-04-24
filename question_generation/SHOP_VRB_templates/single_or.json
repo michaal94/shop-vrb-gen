@@ -1,0 +1,1918 @@
+[
+  {
+    "text": [
+      "How many things are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?",
+      "How many objects are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?",
+      "What number of things are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?",
+      "What number of objects are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter"
+      },
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          2
+        ],
+        "function": "filter"
+      },
+      {
+        "inputs": [
+          1,
+          3
+        ],
+        "function": "union"
+      },
+      {
+        "inputs": [
+          4
+        ],
+        "function": "count"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          1,
+          3
+        ],
+        "type": "OUT_NEQ"
+      },
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N2>",
+          "<S2>"
+        ],
+        "type": "ONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "How many <Z3> things are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?",
+      "How many <Z3> objects are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?",
+      "What number of <Z3> things are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?",
+      "What number of <Z3> objects are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter"
+      },
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          2
+        ],
+        "function": "filter"
+      },
+      {
+        "inputs": [
+          1,
+          3
+        ],
+        "function": "union"
+      },
+      {
+        "value_inputs": [
+          "<Z3>"
+        ],
+        "inputs": [
+          4
+        ],
+        "function": "filter_size"
+      },
+      {
+        "inputs": [
+          5
+        ],
+        "function": "count"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z3>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          1,
+          3
+        ],
+        "type": "OUT_NEQ"
+      },
+      {
+        "params": [
+          "<Z>"
+        ],
+        "type": "NULL"
+      },
+      {
+        "params": [
+          "<Z2>"
+        ],
+        "type": "NULL"
+      },
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N2>",
+          "<S2>"
+        ],
+        "type": "ONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "How many <C3> things are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?",
+      "How many <C3> objects are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?",
+      "What number of <C3> things are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?",
+      "What number of <C3> objects are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter"
+      },
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          2
+        ],
+        "function": "filter"
+      },
+      {
+        "inputs": [
+          1,
+          3
+        ],
+        "function": "union"
+      },
+      {
+        "value_inputs": [
+          "<C3>"
+        ],
+        "inputs": [
+          4
+        ],
+        "function": "filter_color"
+      },
+      {
+        "inputs": [
+          5
+        ],
+        "function": "count"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C3>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          1,
+          3
+        ],
+        "type": "OUT_NEQ"
+      },
+      {
+        "params": [
+          "<C>"
+        ],
+        "type": "NULL"
+      },
+      {
+        "params": [
+          "<C2>"
+        ],
+        "type": "NULL"
+      },
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N2>",
+          "<S2>"
+        ],
+        "type": "ONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "How many things are [either] <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s [that are] <R> the <Z> <W> <C> <M> <V> <S> <N> or <Z4> <W4> <C4> <M4> <V4> <S4> <N4>s [that are] <R2> the <Z3> <W3> <C3> <M3> <V3> <S3> <N3>?",
+      "How many objects are [either] <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s [that are] <R> the <Z> <W> <C> <M> <V> <S> <N> or <Z4> <W4> <C4> <M4> <V4> <S4> <N4>s [that are] <R2> the <Z3> <W3> <C3> <M3> <V3> <S3> <N3>?",
+      "What number of objects are [either] <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s [that are] <R> the <Z> <W> <C> <M> <V> <S> <N> or <Z4> <W4> <C4> <M4> <V4> <S4> <N4>s [that are] <R2> the <Z3> <W3> <C3> <M3> <V3> <S3> <N3>?",
+      "What number of things are [either] <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s [that are] <R> the <Z> <W> <C> <M> <V> <S> <N> or <Z4> <W4> <C4> <M4> <V4> <S4> <N4>s [that are] <R2> the <Z3> <W3> <C3> <M3> <V3> <S3> <N3>?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter_unique"
+      },
+      {
+        "value_inputs": [
+          "<R>",
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          1
+        ],
+        "function": "relate_filter"
+      },
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z3>",
+          "<W3>",
+          "<C3>",
+          "<M3>",
+          "<V3>",
+          "<S3>",
+          "<N3>"
+        ],
+        "inputs": [
+          3
+        ],
+        "function": "filter_unique"
+      },
+      {
+        "value_inputs": [
+          "<R2>",
+          "<Z4>",
+          "<W4>",
+          "<C4>",
+          "<M4>",
+          "<V4>",
+          "<S4>",
+          "<N4>"
+        ],
+        "inputs": [
+          4
+        ],
+        "function": "relate_filter"
+      },
+      {
+        "inputs": [
+          2,
+          5
+        ],
+        "function": "union"
+      },
+      {
+        "inputs": [
+          6
+        ],
+        "function": "count"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Relation",
+        "name": "<R>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z3>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W3>"
+      },
+      {
+        "type": "Color",
+        "name": "<C3>"
+      },
+      {
+        "type": "Material",
+        "name": "<M3>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V3>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S3>"
+      },
+      {
+        "type": "Name",
+        "name": "<N3>"
+      },
+      {
+        "type": "Relation",
+        "name": "<R2>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z4>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W4>"
+      },
+      {
+        "type": "Color",
+        "name": "<C4>"
+      },
+      {
+        "type": "Material",
+        "name": "<M4>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V4>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S4>"
+      },
+      {
+        "type": "Name",
+        "name": "<N4>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N2>",
+          "<S2>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N3>",
+          "<S3>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N4>",
+          "<S4>"
+        ],
+        "type": "ONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "How many <M3> things are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?",
+      "How many <M3> objects are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?",
+      "What number of <M3> things are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?",
+      "What number of <M3> objects are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter"
+      },
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          2
+        ],
+        "function": "filter"
+      },
+      {
+        "inputs": [
+          1,
+          3
+        ],
+        "function": "union"
+      },
+      {
+        "value_inputs": [
+          "<M3>"
+        ],
+        "inputs": [
+          4
+        ],
+        "function": "filter_material"
+      },
+      {
+        "inputs": [
+          5
+        ],
+        "function": "count"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M3>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          1,
+          3
+        ],
+        "type": "OUT_NEQ"
+      },
+      {
+        "params": [
+          "<M>"
+        ],
+        "type": "NULL"
+      },
+      {
+        "params": [
+          "<M2>"
+        ],
+        "type": "NULL"
+      },
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N2>",
+          "<S2>"
+        ],
+        "type": "ONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "How many <S3>s are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?",
+      "What number of <S3>s are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter"
+      },
+      {
+        "value_inputs": [
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          1
+        ],
+        "function": "filter"
+      },
+      {
+        "inputs": [
+          2,
+          3
+        ],
+        "function": "union"
+      },
+      {
+        "value_inputs": [
+          "<S3>"
+        ],
+        "inputs": [
+          4
+        ],
+        "function": "filter_shape"
+      },
+      {
+        "inputs": [
+          5
+        ],
+        "function": "count"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S3>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          2,
+          3
+        ],
+        "type": "OUT_NEQ"
+      },
+      {
+        "params": [
+          "<S>"
+        ],
+        "type": "NULL"
+      },
+      {
+        "params": [
+          "<S2>"
+        ],
+        "type": "NULL"
+      },
+      {
+        "params": [
+          "<V>"
+        ],
+        "type": "NULL"
+      },
+      {
+        "params": [
+          "<V2>"
+        ],
+        "type": "NULL"
+      }
+    ]
+  },
+  {
+    "text": [
+      "How many things are [either] <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s [that are] <R> the <Z> <W> <C> <M> <V> <S> <N> or <Z3> <W3> <C3> <M3> <V3> <S3> <N3>s?",
+      "How many objects are [either] <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s [that are] <R> the <Z> <W> <C> <M> <V> <S> <N> or <Z3> <W3> <C3> <M3> <V3> <S3> <N3>s?",
+      "What number of things are [either] <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s [that are] <R> the <Z> <W> <C> <M> <V> <S> <N> or <Z3> <W3> <C3> <M3> <V3> <S3> <N3>s?",
+      "What number of objects are [either] <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s [that are] <R> the <Z> <W> <C> <M> <V> <S> <N> or <Z3> <W3> <C3> <M3> <V3> <S3> <N3>s?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter_unique"
+      },
+      {
+        "value_inputs": [
+          "<R>",
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          1
+        ],
+        "function": "relate_filter"
+      },
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z3>",
+          "<W3>",
+          "<C3>",
+          "<M3>",
+          "<V3>",
+          "<S3>",
+          "<N3>"
+        ],
+        "inputs": [
+          3
+        ],
+        "function": "filter"
+      },
+      {
+        "inputs": [
+          2,
+          4
+        ],
+        "function": "union"
+      },
+      {
+        "inputs": [
+          5
+        ],
+        "function": "count"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Relation",
+        "name": "<R>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z3>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W3>"
+      },
+      {
+        "type": "Color",
+        "name": "<C3>"
+      },
+      {
+        "type": "Material",
+        "name": "<M3>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V3>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S3>"
+      },
+      {
+        "type": "Name",
+        "name": "<N3>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N2>",
+          "<S2>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N3>",
+          "<S3>"
+        ],
+        "type": "ONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "How many things are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z3> <W3> <C3> <M3> <V3> <S3> <N3>s [that are] <R> the <Z2> <W2> <C2> <M2> <V2> <S2> <N2>?",
+      "How many objects are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z3> <W3> <C3> <M3> <V3> <S3> <N3>s [that are] <R> the <Z2> <W2> <C2> <M2> <V2> <S2> <N2>?",
+      "What number of things are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z3> <W3> <C3> <M3> <V3> <S3> <N3>s [that are] <R> the <Z2> <W2> <C2> <M2> <V2> <S2> <N2>?",
+      "What number of objects are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z3> <W3> <C3> <M3> <V3> <S3> <N3>s [that are] <R> the <Z2> <W2> <C2> <M2> <V2> <S2> <N2>?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter"
+      },
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          2
+        ],
+        "function": "filter_unique"
+      },
+      {
+        "value_inputs": [
+          "<R>",
+          "<Z3>",
+          "<W3>",
+          "<C3>",
+          "<M3>",
+          "<V3>",
+          "<S3>",
+          "<N3>"
+        ],
+        "inputs": [
+          3
+        ],
+        "function": "relate_filter"
+      },
+      {
+        "inputs": [
+          1,
+          4
+        ],
+        "function": "union"
+      },
+      {
+        "inputs": [
+          5
+        ],
+        "function": "count"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      },
+      {
+        "type": "Relation",
+        "name": "<R>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z3>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W3>"
+      },
+      {
+        "type": "Color",
+        "name": "<C3>"
+      },
+      {
+        "type": "Material",
+        "name": "<M3>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V3>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S3>"
+      },
+      {
+        "type": "Name",
+        "name": "<N3>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N2>",
+          "<S2>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N3>",
+          "<S3>"
+        ],
+        "type": "ONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "How many <W3> things are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?",
+      "How many <W3> objects are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?",
+      "What number of <W3> things are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?",
+      "What number of <W3> objects are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter"
+      },
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          2
+        ],
+        "function": "filter"
+      },
+      {
+        "inputs": [
+          1,
+          3
+        ],
+        "function": "union"
+      },
+      {
+        "value_inputs": [
+          "<W3>"
+        ],
+        "inputs": [
+          4
+        ],
+        "function": "filter_weight"
+      },
+      {
+        "inputs": [
+          5
+        ],
+        "function": "count"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W3>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          1,
+          3
+        ],
+        "type": "OUT_NEQ"
+      },
+      {
+        "params": [
+          "<W>"
+        ],
+        "type": "NULL"
+      },
+      {
+        "params": [
+          "<W2>"
+        ],
+        "type": "NULL"
+      },
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N2>",
+          "<S2>"
+        ],
+        "type": "ONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "How many <V3> things are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?",
+      "How many <V3> objects are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?",
+      "What number of <V3> things are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?",
+      "What number of <V3> objects are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter"
+      },
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          2
+        ],
+        "function": "filter"
+      },
+      {
+        "inputs": [
+          1,
+          3
+        ],
+        "function": "union"
+      },
+      {
+        "value_inputs": [
+          "<V3>"
+        ],
+        "inputs": [
+          4
+        ],
+        "function": "filter_movability"
+      },
+      {
+        "inputs": [
+          5
+        ],
+        "function": "count"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V3>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          1,
+          3
+        ],
+        "type": "OUT_NEQ"
+      },
+      {
+        "params": [
+          "<V>"
+        ],
+        "type": "NULL"
+      },
+      {
+        "params": [
+          "<V2>"
+        ],
+        "type": "NULL"
+      },
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N2>",
+          "<S2>"
+        ],
+        "type": "ONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "How many <N3>s are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?",
+      "What number of <N3>s are [either] <Z> <W> <C> <M> <V> <S> <N>s or <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter"
+      },
+      {
+        "value_inputs": [
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          1
+        ],
+        "function": "filter"
+      },
+      {
+        "inputs": [
+          2,
+          3
+        ],
+        "function": "union"
+      },
+      {
+        "value_inputs": [
+          "<N3>"
+        ],
+        "inputs": [
+          4
+        ],
+        "function": "filter_name"
+      },
+      {
+        "inputs": [
+          5
+        ],
+        "function": "count"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N3>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          2,
+          3
+        ],
+        "type": "OUT_NEQ"
+      },
+      {
+        "params": [
+          "<N>"
+        ],
+        "type": "NULL"
+      },
+      {
+        "params": [
+          "<N2>"
+        ],
+        "type": "NULL"
+      }
+    ]
+  }
+]

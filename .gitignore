@@ -1,0 +1,19 @@
+.DS_Store
+__pycache__/
+*.swp
+*.pyc
+output*/
+
+
+#sublime
+sublime/
+
+# blend backup files
+*.blend.1
+
+# images
+# *.jpg
+# *.png
+
+#shop
+shop*

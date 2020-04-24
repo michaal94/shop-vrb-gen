@@ -1,0 +1,1550 @@
+[
+  {
+    "text": [
+      "Are there fewer <Z> <W> <C> <M> <V> <S> <N>s than <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?",
+      "Is the number of <Z> <W> <C> <M> <V> <S> <N>s  less than the number of <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter_count"
+      },
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          2
+        ],
+        "function": "filter_count"
+      },
+      {
+        "inputs": [
+          1,
+          3
+        ],
+        "function": "less_than"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          1,
+          3
+        ],
+        "type": "OUT_NEQ"
+      },
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N2>",
+          "<S2>"
+        ],
+        "type": "ONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "Are there more <Z> <W> <C> <M> <V> <S> <N>s than <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?",
+      "Is the number of <Z> <W> <C> <M> <V> <S> <N>s greater than the number of <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter_count"
+      },
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          2
+        ],
+        "function": "filter_count"
+      },
+      {
+        "inputs": [
+          1,
+          3
+        ],
+        "function": "greater_than"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          1,
+          3
+        ],
+        "type": "OUT_NEQ"
+      },
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N2>",
+          "<S2>"
+        ],
+        "type": "ONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "Are there the same number of <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s [that are] <R> the <Z> <W> <C> <M> <V> <S> <N> and <Z3> <W3> <C3> <M3> <V3> <S3> <N3>s?",
+      "Are there an equal number of <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s [that are] <R> the <Z> <W> <C> <M> <V> <S> <N> and <Z3> <W3> <C3> <M3> <V3> <S3> <N3>s?",
+      "Is the number of <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s [that are] <R> the <Z> <W> <C> <M> <V> <S> <N> the same as the number of <Z3> <W3> <C3> <M3> <V3> <S3> <N3>s?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter_unique"
+      },
+      {
+        "value_inputs": [
+          "<R>",
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          1
+        ],
+        "function": "relate_filter_count"
+      },
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z3>",
+          "<W3>",
+          "<C3>",
+          "<M3>",
+          "<V3>",
+          "<S3>",
+          "<N3>"
+        ],
+        "inputs": [
+          3
+        ],
+        "function": "filter_count"
+      },
+      {
+        "inputs": [
+          2,
+          4
+        ],
+        "function": "equal_integer"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Relation",
+        "name": "<R>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z3>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W3>"
+      },
+      {
+        "type": "Color",
+        "name": "<C3>"
+      },
+      {
+        "type": "Material",
+        "name": "<M3>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V3>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S3>"
+      },
+      {
+        "type": "Name",
+        "name": "<N3>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N2>",
+          "<S2>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N3>",
+          "<S3>"
+        ],
+        "type": "ONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "Are there fewer <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s [that are] <R> the <Z> <W> <C> <M> <V> <S> <N> than <Z3> <W3> <C3> <M3> <V3> <S3> <N3>s?",
+      "Is the number of <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s [that are] <R> the <Z> <W> <C> <M> <V> <S> <N> less than the number of <Z3> <W3> <C3> <M3> <V3> <S3> <N3>s?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter_unique"
+      },
+      {
+        "value_inputs": [
+          "<R>",
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          1
+        ],
+        "function": "relate_filter_count"
+      },
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z3>",
+          "<W3>",
+          "<C3>",
+          "<M3>",
+          "<V3>",
+          "<S3>",
+          "<N3>"
+        ],
+        "inputs": [
+          3
+        ],
+        "function": "filter_count"
+      },
+      {
+        "inputs": [
+          2,
+          4
+        ],
+        "function": "less_than"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Relation",
+        "name": "<R>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z3>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W3>"
+      },
+      {
+        "type": "Color",
+        "name": "<C3>"
+      },
+      {
+        "type": "Material",
+        "name": "<M3>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V3>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S3>"
+      },
+      {
+        "type": "Name",
+        "name": "<N3>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N2>",
+          "<S2>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N3>",
+          "<S3>"
+        ],
+        "type": "ONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "Are there more <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s [that are] <R> the <Z> <W> <C> <M> <V> <S> <N> than <Z3> <W3> <C3> <M3> <V3> <S3> <N3>s?",
+      "Is the number of <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s [that are] <R> the <Z> <W> <C> <M> <V> <S> <N> greater than the number of <Z3> <W3> <C3> <M3> <V3> <S3> <N3>s?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter_unique"
+      },
+      {
+        "value_inputs": [
+          "<R>",
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          1
+        ],
+        "function": "relate_filter_count"
+      },
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z3>",
+          "<W3>",
+          "<C3>",
+          "<M3>",
+          "<V3>",
+          "<S3>",
+          "<N3>"
+        ],
+        "inputs": [
+          3
+        ],
+        "function": "filter_count"
+      },
+      {
+        "inputs": [
+          2,
+          4
+        ],
+        "function": "greater_than"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Relation",
+        "name": "<R>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z3>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W3>"
+      },
+      {
+        "type": "Color",
+        "name": "<C3>"
+      },
+      {
+        "type": "Material",
+        "name": "<M3>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V3>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S3>"
+      },
+      {
+        "type": "Name",
+        "name": "<N3>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N2>",
+          "<S2>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N3>",
+          "<S3>"
+        ],
+        "type": "ONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "Is the number of <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s [that are] <R> the <Z> <W> <C> <M> <V> <S> <N> the same as the number of <Z4> <W4> <C4> <M4> <V4> <S4> <N4>s [that are] <R2> the <Z3> <W3> <C3> <M3> <V3> <S3> <N3>?",
+      "Are there an equal number of <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s [that are] <R> the <Z> <W> <C> <M> <V> <S> <N> and <Z4> <W4> <C4> <M4> <V4> <S4> <N4>s [that are] <R2> the <Z3> <W3> <C3> <M3> <V3> <S3> <N3>?",
+      "Are there the same number of <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s [that are] <R> the <Z> <W> <C> <M> <V> <S> <N> and <Z4> <W4> <C4> <M4> <V4> <S4> <N4>s [that are] <R2> the <Z3> <W3> <C3> <M3> <V3> <S3> <N3>?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter_unique"
+      },
+      {
+        "value_inputs": [
+          "<R>",
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          1
+        ],
+        "function": "relate_filter_count"
+      },
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z3>",
+          "<W3>",
+          "<C3>",
+          "<M3>",
+          "<V3>",
+          "<S3>",
+          "<N3>"
+        ],
+        "inputs": [
+          3
+        ],
+        "function": "filter_unique"
+      },
+      {
+        "value_inputs": [
+          "<R2>",
+          "<Z4>",
+          "<W4>",
+          "<C4>",
+          "<M4>",
+          "<V4>",
+          "<S4>",
+          "<N4>"
+        ],
+        "inputs": [
+          4
+        ],
+        "function": "relate_filter_count"
+      },
+      {
+        "inputs": [
+          2,
+          5
+        ],
+        "function": "equal_integer"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Relation",
+        "name": "<R>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z3>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W3>"
+      },
+      {
+        "type": "Color",
+        "name": "<C3>"
+      },
+      {
+        "type": "Material",
+        "name": "<M3>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V3>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S3>"
+      },
+      {
+        "type": "Name",
+        "name": "<N3>"
+      },
+      {
+        "type": "Relation",
+        "name": "<R2>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z4>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W4>"
+      },
+      {
+        "type": "Color",
+        "name": "<C4>"
+      },
+      {
+        "type": "Material",
+        "name": "<M4>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V4>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S4>"
+      },
+      {
+        "type": "Name",
+        "name": "<N4>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          1,
+          4
+        ],
+        "type": "OUT_NEQ"
+      },
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N2>",
+          "<S2>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N3>",
+          "<S3>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N4>",
+          "<S4>"
+        ],
+        "type": "ONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "Is the number of <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s [that are] <R> the <Z> <W> <C> <M> <V> <S> <N> less than the number of <Z4> <W4> <C4> <M4> <V4> <S4> <N4>s [that are] <R2> the <Z3> <W3> <C3> <M3> <V3> <S3> <N3>?",
+      "Are there fewer <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s [that are] <R> the <Z> <W> <C> <M> <V> <S> <N> than <Z4> <W4> <C4> <M4> <V4> <S4> <N4>s [that are] <R2> the <Z3> <W3> <C3> <M3> <V3> <S3> <N3>?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter_unique"
+      },
+      {
+        "value_inputs": [
+          "<R>",
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          1
+        ],
+        "function": "relate_filter_count"
+      },
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z3>",
+          "<W3>",
+          "<C3>",
+          "<M3>",
+          "<V3>",
+          "<S3>",
+          "<N3>"
+        ],
+        "inputs": [
+          3
+        ],
+        "function": "filter_unique"
+      },
+      {
+        "value_inputs": [
+          "<R2>",
+          "<Z4>",
+          "<W4>",
+          "<C4>",
+          "<M4>",
+          "<V4>",
+          "<S4>",
+          "<N4>"
+        ],
+        "inputs": [
+          4
+        ],
+        "function": "relate_filter_count"
+      },
+      {
+        "inputs": [
+          2,
+          5
+        ],
+        "function": "less_than"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Relation",
+        "name": "<R>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z3>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W3>"
+      },
+      {
+        "type": "Color",
+        "name": "<C3>"
+      },
+      {
+        "type": "Material",
+        "name": "<M3>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V3>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S3>"
+      },
+      {
+        "type": "Name",
+        "name": "<N3>"
+      },
+      {
+        "type": "Relation",
+        "name": "<R2>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z4>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W4>"
+      },
+      {
+        "type": "Color",
+        "name": "<C4>"
+      },
+      {
+        "type": "Material",
+        "name": "<M4>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V4>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S4>"
+      },
+      {
+        "type": "Name",
+        "name": "<N4>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          1,
+          4
+        ],
+        "type": "OUT_NEQ"
+      },
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N2>",
+          "<S2>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N3>",
+          "<S3>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N4>",
+          "<S4>"
+        ],
+        "type": "ONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "Are there more <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s [that are] <R> the <Z> <W> <C> <M> <V> <S> <N> than <Z4> <W4> <C4> <M4> <V4> <S4> <N4>s [that are] <R2> the <Z3> <W3> <C3> <M3> <V3> <S3> <N3>?",
+      "Is the number of <Z2> <W2> <C2> <M2> <V2> <S2> <N2>s [that are] <R> the <Z> <W> <C> <M> <V> <S> <N> greater than the number of <Z4> <W4> <C4> <M4> <V4> <S4> <N4>s [that are] <R2> the <Z3> <W3> <C3> <M3> <V3> <S3> <N3>?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter_unique"
+      },
+      {
+        "value_inputs": [
+          "<R>",
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          1
+        ],
+        "function": "relate_filter_count"
+      },
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z3>",
+          "<W3>",
+          "<C3>",
+          "<M3>",
+          "<V3>",
+          "<S3>",
+          "<N3>"
+        ],
+        "inputs": [
+          3
+        ],
+        "function": "filter_unique"
+      },
+      {
+        "value_inputs": [
+          "<R2>",
+          "<Z4>",
+          "<W4>",
+          "<C4>",
+          "<M4>",
+          "<V4>",
+          "<S4>",
+          "<N4>"
+        ],
+        "inputs": [
+          4
+        ],
+        "function": "relate_filter_count"
+      },
+      {
+        "inputs": [
+          2,
+          5
+        ],
+        "function": "greater_than"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Relation",
+        "name": "<R>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z3>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W3>"
+      },
+      {
+        "type": "Color",
+        "name": "<C3>"
+      },
+      {
+        "type": "Material",
+        "name": "<M3>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V3>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S3>"
+      },
+      {
+        "type": "Name",
+        "name": "<N3>"
+      },
+      {
+        "type": "Relation",
+        "name": "<R2>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z4>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W4>"
+      },
+      {
+        "type": "Color",
+        "name": "<C4>"
+      },
+      {
+        "type": "Material",
+        "name": "<M4>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V4>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S4>"
+      },
+      {
+        "type": "Name",
+        "name": "<N4>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          1,
+          4
+        ],
+        "type": "OUT_NEQ"
+      },
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N2>",
+          "<S2>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N3>",
+          "<S3>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N4>",
+          "<S4>"
+        ],
+        "type": "ONE_OF"
+      }
+    ]
+  }
+]

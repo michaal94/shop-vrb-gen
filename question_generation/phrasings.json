@@ -1,0 +1,10 @@
+{
+    "text": {
+        "are or": "are",
+        "are either or": "are",
+        " or ?": "?"
+    },
+    "regex": {
+        "(are either)(?!.* or)|(are either)(?=.*(or \\?)$)": "are"
+    }
+}

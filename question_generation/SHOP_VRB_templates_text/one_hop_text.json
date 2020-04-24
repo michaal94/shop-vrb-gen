@@ -1,0 +1,1142 @@
+[
+  {
+    "text": [
+      "What number of <P2><D2><K2> objects are <R> the <Z> <W> <C> <M> <V> <S> <N>?",
+      "How many <P2><D2><K2> objects are <R> the <Z> <W> <C> <M> <V> <S> <N>?",
+      "There is a <Z> <W> <C> <M> <V> <S> <N>; how many <P2><D2><K2> objects are <R> it?",
+      "There is a <Z> <W> <C> <M> <V> <S> <N>; what number of <P2><D2><K2> objects are <R> it?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter_unique"
+      },
+      {
+        "value_inputs": [
+          "<R>",
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>",
+          "<P2>",
+          "<D2>",
+          "<K2>",
+          "<A2>"
+        ],
+        "inputs": [
+          1
+        ],
+        "function": "relate_filter_count"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Relation",
+        "name": "<R>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      },
+      {
+        "type": "Powering",
+        "name": "<P2>"
+      },
+      {
+        "type": "Disassembly",
+        "name": "<D2>"
+      },
+      {
+        "type": "Picking",
+        "name": "<K2>"
+      },
+      {
+        "type": "Attribute",
+        "name": "<A2>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<P2>",
+          "<D2>",
+          "<K2>"
+        ],
+        "type": "ONE_OF_FORCE"
+      },
+      {
+        "params": [
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>",
+          "<A2>"
+        ],
+        "type": "NONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "What number of objects that are <A2> are <R> the <Z> <W> <C> <M> <V> <S> <N>?",
+      "How many objects that are <A2> are <R> the <Z> <W> <C> <M> <V> <S> <N>?",
+      "There is a <Z> <W> <C> <M> <V> <S> <N>; how many objects that are <A2> are <R> it?",
+      "There is a <Z> <W> <C> <M> <V> <S> <N>; what number of objects that are <A2> are <R> it?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter_unique"
+      },
+      {
+        "value_inputs": [
+          "<R>",
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>",
+          "<P2>",
+          "<D2>",
+          "<K2>",
+          "<A2>"
+        ],
+        "inputs": [
+          1
+        ],
+        "function": "relate_filter_count"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Relation",
+        "name": "<R>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      },
+      {
+        "type": "Powering",
+        "name": "<P2>"
+      },
+      {
+        "type": "Disassembly",
+        "name": "<D2>"
+      },
+      {
+        "type": "Picking",
+        "name": "<K2>"
+      },
+      {
+        "type": "Attribute",
+        "name": "<A2>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<A2>"
+        ],
+        "type": "ONE_OF_FORCE"
+      },
+      {
+        "params": [
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>",
+          "<P2>",
+          "<D2>",
+          "<K2>"
+        ],
+        "type": "NONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "Are there any <P2><D2><K2> objects <R> the <Z> <W> <C> <M> <V> <S> <N>?",
+      "There is a <Z> <W> <C> <M> <V> <S> <N>; are there any <P2><D2><K2> objects <R> it?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter_unique"
+      },
+      {
+        "value_inputs": [
+          "<R>",
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>",
+          "<P2>",
+          "<D2>",
+          "<K2>",
+          "<A2>"
+        ],
+        "inputs": [
+          1
+        ],
+        "function": "relate_filter_exist"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Relation",
+        "name": "<R>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      },
+      {
+        "type": "Powering",
+        "name": "<P2>"
+      },
+      {
+        "type": "Disassembly",
+        "name": "<D2>"
+      },
+      {
+        "type": "Picking",
+        "name": "<K2>"
+      },
+      {
+        "type": "Attribute",
+        "name": "<A2>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<P2>",
+          "<D2>",
+          "<K2>"
+        ],
+        "type": "ONE_OF_FORCE"
+      },
+      {
+        "params": [
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>",
+          "<A2>"
+        ],
+        "type": "NONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "Are there any objects that are <A2> <R> the <Z> <W> <C> <M> <V> <S> <N>?",
+      "There is a <Z> <W> <C> <M> <V> <S> <N>; are there any objects that are <A2> <R> it?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter_unique"
+      },
+      {
+        "value_inputs": [
+          "<R>",
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>",
+          "<P2>",
+          "<D2>",
+          "<K2>",
+          "<A2>"
+        ],
+        "inputs": [
+          1
+        ],
+        "function": "relate_filter_exist"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Relation",
+        "name": "<R>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      },
+      {
+        "type": "Powering",
+        "name": "<P2>"
+      },
+      {
+        "type": "Disassembly",
+        "name": "<D2>"
+      },
+      {
+        "type": "Picking",
+        "name": "<K2>"
+      },
+      {
+        "type": "Attribute",
+        "name": "<A2>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<A2>"
+        ],
+        "type": "ONE_OF_FORCE"
+      },
+      {
+        "params": [
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>",
+          "<P2>",
+          "<D2>",
+          "<K2>"
+        ],
+        "type": "NONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "What is the way of powering the <Z2> <W2> <C2> <M2> <V2> <S2> <N2> [that is] <R> the <Z> <W> <C> <M> <V> <S> <N>?",
+      "How is the <Z2> <W2> <C2> <M2> <V2> <S2> <N2> [that is] <R> the <Z> <W> <C> <M> <V> <S> <N> powered?",
+      "The <Z2> <W2> <C2> <M2> <V2> <S2> <N2> [that is] <R> the <Z> <W> <C> <M> <V> <S> <N> is powered how?",
+      "There is a <Z2> <W2> <C2> <M2> <V2> <S2> <N2> [that is] <R> the <Z> <W> <C> <M> <V> <S> <N>; how is it powered?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter_unique"
+      },
+      {
+        "value_inputs": [
+          "<R>",
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          1
+        ],
+        "function": "relate_filter_unique"
+      },
+      {
+        "inputs": [
+          2
+        ],
+        "function": "query_powering"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Relation",
+        "name": "<R>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N2>",
+          "<S2>"
+        ],
+        "type": "ONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "What is the way of disassembling the <Z2> <W2> <C2> <M2> <V2> <S2> <N2> [that is] <R> the <Z> <W> <C> <M> <V> <S> <N>?",
+      "How is the <Z2> <W2> <C2> <M2> <V2> <S2> <N2> [that is] <R> the <Z> <W> <C> <M> <V> <S> <N> dismantled?",
+      "There is a <Z2> <W2> <C2> <M2> <V2> <S2> <N2> [that is] <R> the <Z> <W> <C> <M> <V> <S> <N>; what is the way of its disassembly?",
+      "There is a <Z2> <W2> <C2> <M2> <V2> <S2> <N2> [that is] <R> the <Z> <W> <C> <M> <V> <S> <N>; how is it dismantled?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter_unique"
+      },
+      {
+        "value_inputs": [
+          "<R>",
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          1
+        ],
+        "function": "relate_filter_unique"
+      },
+      {
+        "inputs": [
+          2
+        ],
+        "function": "query_disassembly"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Relation",
+        "name": "<R>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N2>",
+          "<S2>"
+        ],
+        "type": "ONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "How is the <Z2> <W2> <C2> <M2> <V2> <S2> <N2> [that is] <R> the <Z> <W> <C> <M> <V> <S> <N> picked up?",
+      "What is the way of picking up the <Z2> <W2> <C2> <M2> <V2> <S2> <N2> [that is] <R> the <Z> <W> <C> <M> <V> <S> <N>?",
+      "The <Z2> <W2> <C2> <M2> <V2> <S2> <N2> [that is] <R> the <Z> <W> <C> <M> <V> <S> <N> is picked up how?",
+      "There is a <Z2> <W2> <C2> <M2> <V2> <S2> <N2> [that is] <R> the <Z> <W> <C> <M> <V> <S> <N>; how is it picked up?",
+      "There is a <Z2> <W2> <C2> <M2> <V2> <S2> <N2> [that is] <R> the <Z> <W> <C> <M> <V> <S> <N>; what is the way of picking it up?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter_unique"
+      },
+      {
+        "value_inputs": [
+          "<R>",
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          1
+        ],
+        "function": "relate_filter_unique"
+      },
+      {
+        "inputs": [
+          2
+        ],
+        "function": "query_picking"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Relation",
+        "name": "<R>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N2>",
+          "<S2>"
+        ],
+        "type": "ONE_OF"
+      }
+    ]
+  },
+  {
+    "text": [
+      "What are the attributes of the <Z2> <W2> <C2> <M2> <V2> <S2> <N2> [that is] <R> the <Z> <W> <C> <M> <V> <S> <N>?",
+      "The <Z2> <W2> <C2> <M2> <V2> <S2> <N2> [that is] <R> the <Z> <W> <C> <M> <V> <S> <N> has what attributes?",
+      "There is a <Z2> <W2> <C2> <M2> <V2> <S2> <N2> [that is] <R> the <Z> <W> <C> <M> <V> <S> <N>; what are its attributes?"
+    ],
+    "nodes": [
+      {
+        "inputs": [],
+        "function": "scene"
+      },
+      {
+        "value_inputs": [
+          "<Z>",
+          "<W>",
+          "<C>",
+          "<M>",
+          "<V>",
+          "<S>",
+          "<N>"
+        ],
+        "inputs": [
+          0
+        ],
+        "function": "filter_unique"
+      },
+      {
+        "value_inputs": [
+          "<R>",
+          "<Z2>",
+          "<W2>",
+          "<C2>",
+          "<M2>",
+          "<V2>",
+          "<S2>",
+          "<N2>"
+        ],
+        "inputs": [
+          1
+        ],
+        "function": "relate_filter_unique"
+      },
+      {
+        "inputs": [
+          2
+        ],
+        "function": "query_attribute"
+      }
+    ],
+    "params": [
+      {
+        "type": "Size",
+        "name": "<Z>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W>"
+      },
+      {
+        "type": "Color",
+        "name": "<C>"
+      },
+      {
+        "type": "Material",
+        "name": "<M>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S>"
+      },
+      {
+        "type": "Name",
+        "name": "<N>"
+      },
+      {
+        "type": "Relation",
+        "name": "<R>"
+      },
+      {
+        "type": "Size",
+        "name": "<Z2>"
+      },
+      {
+        "type": "Weight",
+        "name": "<W2>"
+      },
+      {
+        "type": "Color",
+        "name": "<C2>"
+      },
+      {
+        "type": "Material",
+        "name": "<M2>"
+      },
+      {
+        "type": "Movability",
+        "name": "<V2>"
+      },
+      {
+        "type": "Shape",
+        "name": "<S2>"
+      },
+      {
+        "type": "Name",
+        "name": "<N2>"
+      }
+    ],
+    "constraints": [
+      {
+        "params": [
+          "<N>",
+          "<S>"
+        ],
+        "type": "ONE_OF"
+      },
+      {
+        "params": [
+          "<N2>",
+          "<S2>"
+        ],
+        "type": "ONE_OF"
+      }
+    ]
+  }
+]

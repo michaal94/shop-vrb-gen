@@ -1,0 +1,355 @@
+{
+    "baking tray": {
+        "picking": "graspable",
+        "powering": "non-powered",
+        "disassembly": "non-dismantable",
+        "attribute": {
+            "default": [
+                "oven safe",
+                "dishwasher safe",
+                "corrosion resistant",
+                "non-stick coated",
+                "high temperature resistant",
+                "used for meal preparation"
+            ],
+            "material:rubber": [
+                "oven safe",
+                "dishwasher safe",
+                "corrosion resistant",
+                "non-stick coated",
+                "high temperature resistant",
+                "used for meal preparation",
+                "suitable for freezing",
+                "suitable for microwave",
+                "flexible"
+            ]
+        }
+    },
+    "blender": {
+        "picking": "stationary",
+        "powering": "socket-powered",
+        "disassembly": "dismantable",
+        "attribute": [
+            "used for meal preparation",
+            "used for grinding",
+            "used for mixing food",
+            "operated by buttons",
+            "equipped with indicator lights",
+            "equipped with removable parts",
+            "used for drinks preparation"
+        ]
+    },
+    "bowl": {
+        "picking": "graspable",
+        "powering": "non-powered",
+        "disassembly": "non-dismantable",
+        "attribute": {
+            "default": [
+                "suitable for freezing",
+                "suitable for microwave",
+                "used for meal preparation",
+                "dishwasher safe",
+                "used for mixing food",
+                "part of dishware"
+            ],
+            "material:glass": [
+                "suitable for freezing",
+                "suitable for microwave",
+                "used for meal preparation",
+                "dishwasher safe",
+                "used for mixing food",
+                "part of dishware",
+                "oven safe"
+            ]
+        }
+    },
+    "chopping board": {
+        "picking": "graspable",
+        "powering": "non-powered",
+        "disassembly": "non-dismantable",
+        "attribute": {
+            "default": [
+                "used for meal preparation",
+                "used for cutting",
+                "dishwasher safe",
+                "easy to clean",
+                "easily stored"
+            ],
+            "material:rubber": [
+                "used for meal preparation",
+                "used for cutting",
+                "dishwasher safe",
+                "easy to clean",
+                "easily stored",
+                "flexible"
+            ]
+        }
+    },
+    "coffee maker": {
+        "picking": "stationary",
+        "powering": "socket-powered",
+        "disassembly": "dismantable",
+        "attribute": [
+            "operated by buttons",
+            "equipped with indicator lights",
+            "equipped with removable parts",
+            "used for drinks preparation",
+            "in need of regular maintenance",
+            "equipped with filter",
+            "used for coffee"
+        ]
+    },
+    "food box": {
+        "picking": "graspable",
+        "powering": "non-powered",
+        "disassembly": "non-dismantable",
+        "attribute": [
+            "suitable for microwave",
+            "suitable for freezing",
+            "part of dishware",
+            "dishwasher safe",
+            "easily stored",
+            "used as container",
+            "equipped with lid"
+        ]
+    },
+    "fork": {
+        "picking": "graspable",
+        "powering": "non-powered",
+        "disassembly": "non-dismantable",
+        "attribute": {
+            "default": [
+                "corrosion resistant",
+                "sharp",
+                "dishwasher safe",
+                "used for eating",
+                "part of cutlery"
+            ],
+            "material:plastic": [
+                "corrosion resistant",
+                "sharp",
+                "dishwasher safe",
+                "used for eating",
+                "part of cutlery",
+                "disposable",
+                "recyclable"
+            ]
+        }
+    },
+    "glass": {
+        "picking": "graspable",
+        "powering": "non-powered",
+        "disassembly": "non-dismantable",
+        "attribute": {
+            "default": [
+                "high temperature resistant",
+                "dishwasher safe",
+                "used for drinking",
+                "easy to clean"
+            ],
+            "material:plastic": [
+                "high temperature resistant",
+                "dishwasher safe",
+                "used for drinking",
+                "easy to clean",
+                "disposable",
+                "recyclable"
+            ]
+        }
+    },
+    "kettle": {
+        "picking": "handle-pickable",
+        "disassembly": "unscrewable",
+        "attribute": {
+            "default": [
+                "used for drinks preparation",
+                "hot to touch",
+                "equipped with lid",
+                "suitable for hobs",
+                "dishwasher safe"
+            ],
+            "color:metallic": [
+                "used for drinks preparation",
+                "hot to touch",
+                "equipped with lid",
+                "operated by buttons",
+                "equipped with indicator lights",
+                "equipped with filter"
+            ]
+        },
+        "powering": {
+            "default": "non-powered",
+            "color:metallic": "socket-powered"
+        }
+    },
+    "knife": {
+        "picking": "graspable",
+        "powering": "non-powered",
+        "disassembly": "non-dismantable",
+        "attribute": {
+            "default": [
+                "corrosion resistant",
+                "sharp",
+                "dishwasher safe",
+                "used for eating",
+                "part of cutlery",
+                "used for meal preparation",
+                "used for cutting"
+            ],
+            "material:plastic": [
+                "corrosion resistant",
+                "sharp",
+                "dishwasher safe",
+                "used for eating",
+                "part of cutlery",
+                "used for meal preparation",
+                "used for cutting",
+                "disposable",
+                "recyclable"
+            ]
+        }
+    },
+    "mug": {
+        "picking": "handle-pickable",
+        "powering": "non-powered",
+        "disassembly": "non-dismantable",
+        "attribute": [
+            "high temperature resistant",
+            "dishwasher safe",
+            "used for drinking",
+            "suitable for microwave",
+            "used for coffee",
+            "used for tea"
+        ]
+    },
+    "pan": {
+        "picking": "handle-pickable",
+        "powering": "non-powered",
+        "disassembly": "unscrewable",
+        "attribute": [
+            "oven safe",
+            "dishwasher safe",
+            "corrosion resistant",
+            "non-stick coated",
+            "high temperature resistant",
+            "used for meal preparation",
+            "suitable for hobs",
+            "scratch resistant"
+        ]
+    },
+    "plate": {
+        "picking": "graspable",
+        "powering": "non-powered",
+        "disassembly": "non-dismantable",
+        "attribute": [
+            "suitable for freezing",
+            "suitable for microwave",
+            "easily stored",
+            "part of dishware",
+            "dishwasher safe",
+            "used for eating"
+        ]
+    },
+    "pot": {
+        "picking": "handle-pickable",
+        "powering": "non-powered",
+        "disassembly": "dismantable",
+        "attribute": [
+            "suitable for hobs",
+            "corrosion resistant",
+            "non-stick coated",
+            "high temperature resistant",
+            "used for meal preparation",
+            "equipped with lid",
+            "dishwasher safe"
+        ]
+    },
+    "scissors": {
+        "picking": "handle-pickable",
+        "powering": "non-powered",
+        "disassembly": "non-dismantable",
+        "attribute": [
+            "rotating",
+            "used for cutting",
+            "corrosion resistant",
+            "sharp"
+        ]
+    },
+    "soda can": {
+        "picking": "graspable",
+        "powering": "non-powered",
+        "disassembly": "non-dismantable",
+        "attribute": [
+            "used for drinking",
+            "corrosion resistant",
+            "used as container",
+            "disposable",
+            "recyclable",
+            "easily stored"
+        ]
+    },
+    "spoon": {
+        "picking": "graspable",
+        "powering": "non-powered",
+        "disassembly": "non-dismantable",
+        "attribute": {
+            "default": [
+                "part of cutlery",
+                "corrosion resistant",
+                "dishwasher safe",
+                "used for eating"
+            ],
+            "material:plastic": [
+                "part of cutlery",
+                "corrosion resistant",
+                "dishwasher safe",
+                "used for eating",
+                "disposable",
+                "recyclable"
+            ]
+        }
+    },
+    "thermos": {
+        "picking": "graspable",
+        "powering": "non-powered",
+        "disassembly": "dismantable",
+        "attribute": [
+            "used for drinking",
+            "corrosion resistant",
+            "used as container",
+            "keeping the temperature",
+            "equipped with lid"
+        ]
+    },
+    "toaster": {
+        "picking": "stationary",
+        "powering": "socket-powered",
+        "disassembly": "unscrewable",
+        "attribute": [
+            "corrosion resistant",
+            "high temperature resistant",
+            "used for meal preparation",
+            "operated by buttons",
+            "equipped with indicator lights",
+            "equipped with removable parts",
+            "in need of regular maintenance"
+        ]
+    },
+    "wine glass": {
+        "picking": "graspable",
+        "powering": "non-powered",
+        "disassembly": "non-dismantable",
+        "attribute": {
+            "default": [
+                "dishwasher safe",
+                "used for drinking"
+            ],
+            "material:plastic": [
+                "dishwasher safe",
+                "used for drinking",
+                "disposable",
+                "recyclable"
+            ]
+        }
+    }
+}

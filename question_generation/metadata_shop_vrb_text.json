@@ -1,0 +1,455 @@
+{
+  "dataset": "SHOP-VRB-text",
+  "types": {
+    "Object": null,
+    "ObjectSet": null,
+    "Integer": null,
+    "Bool": null,
+    "Shape": [
+      "cuboid", "irregularly shaped", "hemisphere", "cylindrical", "long and thin shaped", "flat"
+    ],
+    "Color": [
+      "gray", "red", "blue", "green", "brown", "purple", "cyan", "yellow", "white", "metallic", "transparent", "black"
+    ],
+    "Relation": [
+      "left", "right", "behind", "front"
+    ],
+    "Size": [
+      "small", "large", "medium-sized"
+    ],
+    "Material": [
+      "rubber", "metal", "plastic", "wooden", "ceramic", "glass"
+    ],
+    "Name": [
+      "baking tray", "blender", "bowl", "chopping board", "coffee maker", "food box", "fork", "glass", "kettle", "knife", "mug", "pan", "plate", "pot", "scissors", "soda can", "spoon", "thermos", "toaster", "wine glass"
+    ],
+    "Weight": [
+      "light", "heavy", "medium-weight"
+    ],
+    "Movability": [
+      "portable", "movable"
+    ],
+    "Powering": [
+      "socket-powered", "non-powered"
+    ],
+    "Disassembly": [
+      "non-dismantable", "unscrewable", "dismantable"
+    ],
+    "Picking": [
+      "handle-pickable", "graspable", "stationary"
+    ],
+    "Attribute":
+    [
+      "oven safe", "dishwasher safe", "corrosion resistant", "non-stick coated", "high temperature resistant", "used for meal preparation", "suitable for freezing", "suitable for microwave", "flexible", "used for grinding", "used for mixing food", "operated by buttons", "equipped with indicator lights", "equipped with removable parts", "used for drinks preparation", "part of dishware", "used for cutting", "easy to clean", "easily stored", "in need of regular maintenance", "equipped with filter", "used for coffee", "used as container", "equipped with lid", "sharp", "used for eating", "part of cutlery", "disposable", "recyclable", "used for drinking", "hot to touch", "suitable for hobs", "used for tea", "scratch resistant", "rotating", "keeping the temperature"
+    ]
+  },
+  "functions": [
+    {
+      "name": "scene",
+      "inputs": [],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "filter_color",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Color"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "filter_weight",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Weight"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "filter_movability",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Movability"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "filter_name",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Name"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "filter_shape",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Shape"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "filter_size",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Size"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "filter_material",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Material"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "filter_attribute",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Attribute"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "filter_powering",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Powering"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "filter_disassembly",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Disassembly"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "filter_picking",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Picking"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "unique",
+      "inputs": ["ObjectSet"],
+      "output": "Object",
+      "terminal": false,
+      "properties": []
+    },
+    {
+      "name": "relate",
+      "inputs": ["Object"],
+      "side_inputs": ["Relation"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "union",
+      "inputs": ["ObjectSet", "ObjectSet"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "intersect",
+      "inputs": ["ObjectSet", "ObjectSet"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "count",
+      "inputs": ["ObjectSet"],
+      "output": "Integer",
+      "terminal": true
+    },
+    {
+      "name": "query_shape",
+      "inputs": ["Object"],
+      "output": "Shape",
+      "terminal": true
+    },
+    {
+      "name": "query_weight",
+      "inputs": ["Object"],
+      "output": "Weight",
+      "terminal": true
+    },
+    {
+      "name": "query_movability",
+      "inputs": ["Object"],
+      "output": "Movability",
+      "terminal": true
+    },
+    {
+      "name": "query_name",
+      "inputs": ["Object"],
+      "output": "Name",
+      "terminal": true
+    },
+    {
+      "name": "query_color",
+      "inputs": ["Object"],
+      "output": "Color",
+      "terminal": true
+    },
+    {
+      "name": "query_size",
+      "inputs": ["Object"],
+      "output": "Size",
+      "terminal": true
+    },
+    {
+      "name": "query_material",
+      "inputs": ["Object"],
+      "output": "Material",
+      "terminal": true
+    },
+    {
+      "name": "query_attribute",
+      "inputs": ["Object"],
+      "output": "Attribute",
+      "terminal": true
+    },
+    {
+      "name": "query_powering",
+      "inputs": ["Object"],
+      "output": "Powering",
+      "terminal": true
+    },
+    {
+      "name": "query_disassembly",
+      "inputs": ["Object"],
+      "output": "Disassembly",
+      "terminal": true
+    },
+    {
+      "name": "query_picking",
+      "inputs": ["Object"],
+      "output": "Picking",
+      "terminal": true
+    },
+    {
+      "name": "exist",
+      "inputs": ["ObjectSet"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_color",
+      "inputs": ["Color", "Color"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_weight",
+      "inputs": ["Weight", "Weight"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_movability",
+      "inputs": ["Movability", "Movability"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_name",
+      "inputs": ["Name", "Name"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_shape",
+      "inputs": ["Shape", "Shape"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_integer",
+      "inputs": ["Integer", "Integer"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "less_than",
+      "inputs": ["Integer", "Integer"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "greater_than",
+      "inputs": ["Integer", "Integer"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_size",
+      "inputs": ["Size", "Size"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_material",
+      "inputs": ["Material", "Material"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_attribute",
+      "inputs": ["Attribute", "Attribute"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_powering",
+      "inputs": ["Powering", "Powering"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_disassembly",
+      "inputs": ["Disassembly", "Disassembly"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_picking",
+      "inputs": ["Picking", "Picking"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_object",
+      "inputs": ["Object", "Object"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "same_size",
+      "inputs": ["Object"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "same_color",
+      "inputs": ["Object"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "same_material",
+      "inputs": ["Object"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "same_shape",
+      "inputs": ["Object"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "same_weight",
+      "inputs": ["Object"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "same_movability",
+      "inputs": ["Object"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "same_name",
+      "inputs": ["Object"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "same_attribute",
+      "inputs": ["Object"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "same_disassembly",
+      "inputs": ["Object"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "same_picking",
+      "inputs": ["Object"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "same_powering",
+      "inputs": ["Object"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "filter",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Size", "Weight", "Color", "Material", "Movability", "Shape", "Name"],
+      "output": "ObjectSet",
+      "terminal": false,
+      "template_only": true
+    },
+    {
+      "name": "filter_unique",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Size", "Weight", "Color", "Material", "Movability", "Shape", "Name"],
+      "output": "Object",
+      "terminal": false,
+      "template_only": true
+    },
+    {
+      "name": "filter_count",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Size", "Weight", "Color", "Material", "Movability", "Shape", "Name"],
+      "output": "Integer",
+      "terminal": true,
+      "template_only": true
+    },
+    {
+      "name": "filter_exist",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Size", "Weight", "Color", "Material", "Movability", "Shape", "Name"],
+      "output": "Bool",
+      "terminal": true,
+      "template_only": true
+    },
+    {
+      "name": "relate_filter",
+      "inputs": ["Object"],
+      "side_inputs": ["Relation", "Size", "Weight", "Color", "Material", "Movability", "Shape", "Name"],
+      "output": "ObjectSet",
+      "terminal": false,
+      "template_only": true
+    },
+    {
+      "name": "relate_filter_unique",
+      "inputs": ["Object"],
+      "side_inputs": ["Relation", "Size", "Weight", "Color", "Material", "Movability", "Shape", "Name"],
+      "output": "Object",
+      "terminal": false,
+      "template_only": true
+    },
+    {
+      "name": "relate_filter_count",
+      "inputs": ["Object"],
+      "side_inputs": ["Relation", "Size", "Weight", "Color", "Material", "Movability", "Shape", "Name"],
+      "output": "Integer",
+      "terminal": false,
+      "template_only": true
+    },
+    {
+      "name": "relate_filter_exist",
+      "inputs": ["Object"],
+      "side_inputs": ["Relation", "Size", "Weight", "Color", "Material", "Movability", "Shape", "Name"],
+      "output": "Bool",
+      "terminal": false,
+      "template_only": true
+    }
+  ]
+}
