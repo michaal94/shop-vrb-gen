@@ -29,7 +29,7 @@ Remember that when using the latter way, you need to match Python version to the
 Then, you need to add the `image_generation` directory to Python path of Blender's Python path. You can add a `.pth` file to the `site-packages` directory of Blender's Python, like this:
 
 ```bash
-echo $PWD/image_generation >> $BLENDER/$VERSION/python/lib/python3.x/site-packages/clevr.pth
+echo $PWD/image_generation >> $BLENDER/$VERSION/python/lib/python3.x/site-packages/shop_vrb.pth
 ```
 
 where `$BLENDER` is the directory where Blender is installed and `$VERSION` is your Blender version.
@@ -46,7 +46,7 @@ where `blender` may be an alias leading to your Blender app.
 If you have an NVIDIA GPU with CUDA installed then you can use the GPU to accelerate rendering like this:
 
 ```bash
-blender --background --python render_images.py -- --num_images 10 --use_gpu 1
+blender --background --python render_images.py -- --num_images 10 --use_gpu
 ```
 
 By default rendered images are stored in `output/images` and ground-truth scene information is placed in `output/SHOP_VRB_scenes.json`.
