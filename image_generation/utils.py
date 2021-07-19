@@ -10,6 +10,7 @@ import bpy
 import bpy_extras
 import json
 import math
+import numpy as np
 
 """
 Some utility functions for interacting with Blender
@@ -347,10 +348,35 @@ def check_intersection(box1, box2):
     return True
 
 
+def exr2png_npz(filename, depth_file):
+    z = exr2numpy(filename)
+    np.save(depth_file, z)
+    bpy.ops.image.open(filepath=filename)
+    basename = os.path.splitext(filename)[0]
+    new_fname = basename + '.png'
+    bpy.context.scene.render.image_settings.file_format = 'PNG'
+    bpy.context.scene.render.image_settings.color_mode = 'RGBA'
+    bpy.context.scene.render.image_settings.color_depth = '8'
+    img = bpy.data.images["Render Result"]
+    img.save_render(new_fname)
+    os.remove(filename)
 
 
+def exr2numpy(exr_path):
+    import OpenEXR
+    import Imath
+    file = OpenEXR.InputFile(exr_path)
+    dw = file.header()['dataWindow']
+    size = (dw.max.x - dw.min.x + 1, dw.max.y - dw.min.y + 1)
+    # print(list(file.header()['channels'].keys()))
 
+    Float_Type = Imath.PixelType(Imath.PixelType.FLOAT)
 
+    z = file.channel('Z', Float_Type)
+    z = np.fromstring(z, dtype=np.float32)
+    z = np.reshape(z, size)
+
+    return z
 
 
 

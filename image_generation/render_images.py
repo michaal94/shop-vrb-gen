@@ -142,6 +142,10 @@ parser.add_argument(
     help="The directory where output images will be stored. It will be " +
     "created if it does not exist.")
 parser.add_argument(
+    '--output_depth_dir', default='../output/depths/',
+    help="The directory where output images will be stored. It will be " +
+    "created if it does not exist.")
+parser.add_argument(
     '--output_scene_dir', default='../output/scenes/',
     help="The directory where output JSON scene structures will be stored. " +
     "It will be created if it does not exist.")
@@ -219,11 +223,26 @@ parser.add_argument(
     "while larger tile sizes may be optimal for GPU-based rendering. " +
     "If it works with your GPU you can set it even to size covering the whole image.")
 
+# Depth
+parser.add_argument(
+    '--render_depth', default=False, action='store_true',
+    help="Setting --render_depth allows for depth rendering. " +
+    "Default behaviour will save images as EXR files in this case." +
+    "If you want png + npz per image, use --convert_depth flag.")
+parser.add_argument(
+    '--convert_depth', default=False, action='store_true',
+    help="Setting --convert_depth allows for EXR to png + npz conversion. " +
+    "PNG + npz will be smaller than EXR.")
+
 
 def main(args):
     num_digits = 6
     prefix = '%s_%s_' % (args.filename_prefix, args.split)
-    img_template = '%s%%0%dd.png' % (prefix, num_digits)
+    if args.render_depth:
+        img_template = '%s%%0%dd.exr' % (prefix, num_digits)
+    else:
+        img_template = '%s%%0%dd.png' % (prefix, num_digits)
+    depth_template = '%s%%0%dd.npy' % (prefix, num_digits)
     scene_template = '%s%%0%dd.json' % (prefix, num_digits)
     blend_template = '%s%%0%dd.blend' % (prefix, num_digits)
     img_template = os.path.join(args.output_image_dir, img_template)
@@ -243,6 +262,7 @@ def main(args):
     for i in range(args.num_images):
         img_path = img_template % (i + args.start_idx)
         scene_path = scene_template % (i + args.start_idx)
+        depth_path = depth_template % (i + args.start_idx)
         all_scene_paths.append(scene_path)
         blend_path = None
         if args.save_blendfiles:
@@ -256,6 +276,7 @@ def main(args):
             output_image=img_path,
             output_scene=scene_path,
             output_blendfile=blend_path,
+            output_depth=depth_path
         )
 
     # After rendering all images, combine the JSON files for each scene into a
@@ -284,7 +305,8 @@ def render_scene(
         output_split='none',
         output_image='render.png',
         output_scene='render_json',
-        output_blendfile=None):
+        output_blendfile=None,
+        output_depth='depth.npz'):
 
     # Load the main blendfile
     bpy.ops.wm.open_mainfile(filepath=args.base_scene_blendfile)
@@ -311,6 +333,7 @@ def render_scene(
     render_args.resolution_percentage = 100
     render_args.tile_x = args.render_tile_size
     render_args.tile_y = args.render_tile_size
+
     if args.use_gpu:
         # Blender changed the API for enabling CUDA at some point
         if bpy.app.version < (2, 78, 0):
@@ -405,12 +428,30 @@ def render_scene(
     # Render the scene and dump the scene data structure
     scene_struct['objects'] = objects
     scene_struct['relationships'] = compute_all_relationships(scene_struct)
+
+    # while True:
+    #     try:
+    #         bpy.ops.render.render(write_still=True)
+
+    #         break
+    #     except Exception as e:
+    #         print(e)
+
+    if args.render_depth:
+        render_args.image_settings.file_format = 'OPEN_EXR'
+        render_args.image_settings.use_zbuffer = True
+
     while True:
         try:
             bpy.ops.render.render(write_still=True)
+
             break
         except Exception as e:
             print(e)
+
+    if args.render_depth and args.convert_depth:
+        utils.exr2png_npz(output_image, os.path.join(args.output_depth_dir,
+                                                     output_depth))
 
     with open(output_scene, 'w') as f:
         json.dump(scene_struct, f, indent=2)
