@@ -379,18 +379,25 @@ def exr2numpy(exr_path):
     return z
 
 
+def create_shadeless_material(name, rgba):
+    mat = bpy.data.materials.new(name)
+    mat.use_nodes = True
+    mat.node_tree.nodes.remove(mat.node_tree.nodes['Principled BSDF'])
+    nodes = mat.node_tree.nodes
+    out_node = nodes['Material Output']
+    mix_node = nodes.new(type='ShaderNodeMixShader')
+    # Link mix shader out to material output in
+    mat.node_tree.links.new(mix_node.outputs[0], out_node.inputs[0])
 
+    light_node = nodes.new(type='ShaderNodeLightPath')
+    # Link light path out to mix shader in
+    mat.node_tree.links.new(light_node.outputs[0], mix_node.inputs[0])
 
+    rgb_node = nodes.new(type='ShaderNodeRGB')
+    mat.node_tree.links.new(rgb_node.outputs[0], mix_node.inputs[2])
+    rgb_node.outputs[0].default_value = rgba
 
-
-
-
-
-
-
-
-
-
+    return mat
 
 
 

@@ -667,6 +667,9 @@ def check_visibility(blender_objects, min_pixels_per_object):
     p = list(img.pixels)
     # Count whether the number of colours is correct - full occlusion
     color_count = Counter((p[i], p[i + 1], p[i + 2], p[i + 3]) for i in range(0, len(p), 4))
+    print(color_count)
+    print(len(color_count))
+    print(len(blender_objects))
     if len(color_count) != len(blender_objects) + 1:
         return False, None
     # Check partial occlusion
@@ -690,12 +693,20 @@ def render_shadeless(blender_objects, path='flat.png'):
 
     # Cache the render args we are about to clobber
     old_filepath = render_args.filepath
-    old_engine = render_args.engine
+    # old_engine = render_args.engine
     old_filter_size = render_args.filter_size
+    old_aa_val = bpy.context.scene.cycles.filter_width
+    bpy.context.scene.cycles.pixel_filter_type = 'BLACKMAN_HARRIS'
+    bpy.context.scene.cycles.filter_width = 0.0
+    bpy.context.scene.cycles.progressive = 'BRANCHED_PATH'
+    old_aa_samples = bpy.context.scene.cycles.aa_samples
+    bpy.context.scene.cycles.aa_samples = 1
+
+
 
     # Override some render settings to have flat shading
     render_args.filepath = path
-    render_args.engine = 'BLENDER_WORKBENCH'
+    # render_args.engine = 'BLENDER_WORKBENCH'
     render_args.filter_size = 0.0
 
     # Switch denoising state
@@ -723,17 +734,22 @@ def render_shadeless(blender_objects, path='flat.png'):
         obj.select_set(state=True)
         bpy.ops.object.duplicate(linked=False, mode='INIT')
         utils.set_render(obj, False)
-        bpy.ops.material.new()
-        mat = bpy.data.materials['Material']
-        mat.name = 'Material_temp_%d' % i
+        # bpy.ops.material.new()
+        # mat = bpy.data.materials['Material']
+        # mat.name = 'Material_temp_%d' % i
+        mat_name = 'Material_temp_%d' % i
         while True:
             r, g, b = [random.randint(0, 255) for _ in range(3)]
             if (r, g, b) not in object_colors and (r, g, b) != (13, 13, 13):
                 break
         object_colors.append((r, g, b))
-        mat.diffuse_color = (float(r) / 255, float(g) / 255, float(b) / 255, 1.0)
-        mat.shadow_method = 'NONE'
+        # mat.diffuse_color = (float(r) / 255, float(g) / 255, float(b) / 255, 1.0)
+        # mat.shadow_method = 'NONE'
+        mat_color = (float(r) / 255, float(g) / 255, float(b) / 255, 1.0)
         new_obj.append(bpy.context.selected_objects[0])
+
+        mat = utils.create_shadeless_material(mat_name, mat_color)
+
         for i in range(len(bpy.context.selected_objects[0].data.materials)):
             bpy.context.selected_objects[0].data.materials[i] = mat
         for o in bpy.data.objects:
@@ -762,11 +778,16 @@ def render_shadeless(blender_objects, path='flat.png'):
 
     # Set the render settings back to what they were
     render_args.filepath = old_filepath
-    render_args.engine = old_engine
+    # render_args.engine = old_engine
     render_args.filter_size = old_filter_size
     bpy.context.scene.display.shading.light = old_shading
     bpy.context.scene.display.render_aa = old_aa
     bpy.context.scene.node_tree.nodes["Switch"].check = old_denoising_state
+    bpy.context.scene.cycles.pixel_filter_type = 'BLACKMAN_HARRIS'
+    bpy.context.scene.cycles.filter_width = old_aa_val
+    bpy.context.scene.cycles.aa_samples = old_aa_samples
+
+    bpy.context.scene.cycles.progressive = 'PATH'
 
     return object_colors
 
